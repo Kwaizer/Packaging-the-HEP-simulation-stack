@@ -1,1 +1,1 @@
-# Packaging-the-HEP-simulation-stack
+# Packaging the HEP simulation stack on conda-forge
