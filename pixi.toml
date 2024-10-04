@@ -1,0 +1,25 @@
+[project]
+authors = ["Kwaizer <levpambuk@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "Packaging-the-HEP-simulation-stack"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+lab = "jupyter lab"
+
+[dependencies]
+python = ">=3.12.6,<4"
+cxx-compiler = ">=1.8.0,<2"
+lhapdf = ">=6.5.4,<7"
+hepmc2 = ">=2.6.11,<3"
+hepmc3 = ">=3.3.0,<4"
+pythia8 = ">=8.311,<9"
+notebook = ">=7.2.2,<8"
+jupyterlab = ">=4.2.5,<5"
+uproot = ">=5.3.12,<6"
+jupytext = ">=1.16.4,<2"
+matplotlib = ">=3.9.2,<4"
+ipympl = ">=0.9.4,<0.10"
+pyhepmc = "*"
