@@ -92,7 +92,7 @@ int main() {
 
 ## pyhepmc
 https://github.com/conda-forge/pyhepmc-feedstock/pull/3
-- Adding macOS and Linux aarch64 and ppc64le builds
+- Adding macOS and Linux `aarch64` and `ppc64le` builds
 > [!NOTE] 
 > `pyhepmc` isn't on here at the moment with the macOS builds, because they are currently skipped.
 ###
