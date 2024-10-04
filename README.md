@@ -98,5 +98,22 @@ https://github.com/conda-forge/pyhepmc-feedstock/pull/3
 ###
 ![image](https://github.com/user-attachments/assets/c957e45e-16f4-4db0-8060-9cbf52a65dae)
 #### Here is an example of a working tool
+```
+import pyhepmc
+
+# Create a HepMC3 event
+event = pyhepmc.GenEvent()
+
+# Create a vertex and a particle
+vertex = pyhepmc.GenVertex(position=(0, 0, 0, 0))  # (x, y, z, t)
+particle = pyhepmc.GenParticle(momentum=(0, 0, 100, 100), pid=2212, status=1)  # Proton
+
+# Add particle to vertex and vertex to event
+vertex.add_particle_out(particle)
+event.add_vertex(vertex)
+
+print(f"Number of vertices: {len(event.vertices)}")
+print(f"Number of particles: {len(event.particles)}")
+```
 > ![image](https://github.com/user-attachments/assets/d35bbd9f-4496-4beb-809a-68d37112bd62)
 
