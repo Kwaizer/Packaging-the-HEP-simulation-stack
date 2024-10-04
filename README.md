@@ -59,7 +59,8 @@ int main() {
 
 
 ```
->![image](https://github.com/user-attachments/assets/b2627d56-6a86-40db-ad6d-277eced96838)
+>![image](https://github.com/user-attachments/assets/7eeb9db4-d6d0-476a-857c-a2983d389dbd)
+
 ## hepmc3
 - https://github.com/conda-forge/hepmc3-feedstock/pull/19
 - Added macOS and Linux aarch64 and ppc64le builds
@@ -70,7 +71,7 @@ int main() {
 - Refactored `commands `due to MacOS issues
 - Fallback to readlink if macOS missing greadlink (implemented with patch)
 > ![image](https://github.com/user-attachments/assets/8a97a798-45c5-4673-9084-ec273e82aff2)
-#### Example usage
+#### Example usage. 
 ```
 #include "HepMC3/GenEvent.h"
 #include "HepMC3/GenVertex.h"
@@ -87,7 +88,8 @@ int main() {
 }
 
 ```
->![image](https://github.com/user-attachments/assets/3777f8ce-1e05-48d1-afe6-7b54e9effd4a)
+>![image](https://github.com/user-attachments/assets/db0bb6eb-817e-4a4d-b97e-8956d87960af)
+
 ## pyhepmc
 https://github.com/conda-forge/pyhepmc-feedstock/pull/3
 - Adding macOS and Linux aarch64 and ppc64le builds
