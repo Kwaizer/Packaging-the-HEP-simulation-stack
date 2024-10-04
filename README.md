@@ -35,7 +35,7 @@ pyhepmc = "*"
 https://github.com/conda-forge/hepmc2-feedstock/pull/9<br>
 Added and specified `aarch64`, `ppc64le` and `osx_64` platforms for a `hepmc2` package
 > ![image](https://github.com/user-attachments/assets/e3a8df70-214a-42e2-94e6-f23e49ee8f3f)
-#### Example usage
+#### Example usage:
 ```
 #include "HepMC/GenEvent.h"
 #include "HepMC/GenParticle.h"
@@ -71,7 +71,7 @@ int main() {
 - Refactored `commands `due to MacOS issues
 - Fallback to readlink if macOS missing greadlink (implemented with patch)
 > ![image](https://github.com/user-attachments/assets/8a97a798-45c5-4673-9084-ec273e82aff2)
-#### Example usage. 
+#### Example usage:
 ```
 #include "HepMC3/GenEvent.h"
 #include "HepMC3/GenVertex.h"
@@ -97,7 +97,7 @@ https://github.com/conda-forge/pyhepmc-feedstock/pull/3
 > `pyhepmc` isn't on here at the moment with the macOS builds, because they are currently skipped.
 ###
 ![image](https://github.com/user-attachments/assets/c957e45e-16f4-4db0-8060-9cbf52a65dae)
-#### Here is an example of a working tool
+#### Here is an example of a working tool:
 ```
 import pyhepmc
 
