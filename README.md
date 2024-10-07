@@ -1,32 +1,22 @@
 # Packaging the HEP simulation stack on conda-forge
 This repository summarizes a work done during IRIS-HEP 2024 Fellowship under the mentorship of<br>Dr. Matthew Feickert (the University of Wisconsin-Madison).
 ## Initial setup
-For demostration of things added to the conda-forge ecosystem a `pixi` environment was created. It allows installation of libraries and applications in a reproducible way and also is cross-platform, which is helpful because it shows that those tools are now accessible on different platforms.
-Here is an edited `pixi.toml`:
+For demostration of things added to the conda-forge ecosystem a `pixi` environment was created. It allows installation of libraries and applications in a reproducible way and also is cross-platform, which is helpful because it shows that those tools are now accessible on different platforms.<br>
+###
+Clone the repo
 ```
-[project]
-...
-platforms = ["linux-64", "osx-64", "osx-arm64"]
-version = "0.1.0"
-
-[tasks]
-lab = "jupyter lab"
-
-[dependencies]
-python = ">=3.12.6,<4"
-cxx-compiler = ">=1.8.0,<2"
-lhapdf = ">=6.5.4,<7"
-hepmc2 = ">=2.6.11,<3"
-hepmc3 = ">=3.3.0,<4"
-pythia8 = ">=8.311,<9"
-notebook = ">=7.2.2,<8"
-jupyterlab = ">=4.2.5,<5"
-uproot = ">=5.3.12,<6"
-jupytext = ">=1.16.4,<2"
-matplotlib = ">=3.9.2,<4"
-ipympl = ">=0.9.4,<0.10"
-pyhepmc = "*"
+git clone git@github.com:Kwaizer/Packaging-the-HEP-simulation-stack.git
 ```
+Start Jupyter notebook
+```
+cd Packaging-the-HEP-simulation-stack
+pixi run lab
+```
+Compile `hepmc2`/`hepmc3` code:
+```
+pixi run compile-hepmc2
+```
+The binaries can be executed in notebook itself.
 
 > [!NOTE] 
 > If a tool is not available for a particular platform listed in `platforms`, `pixi` environment won't be installed
