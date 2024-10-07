@@ -30,6 +30,7 @@ pyhepmc = "*"
 
 > [!NOTE] 
 > If a tool is not available for a particular platform listed in `platforms`, `pixi` environment won't be installed
+> ###
 > ![image](https://github.com/user-attachments/assets/af06dcbc-e46f-4ef9-b8e1-29e2c55a8440)<br>
 > In order to get around this, consider running pixi task with `-e` flag:
 > ```
