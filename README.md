@@ -30,7 +30,11 @@ pyhepmc = "*"
 
 > [!NOTE] 
 > If a tool is not available for a particular platform listed in `platforms`, `pixi` environment won't be installed
-> ![image](https://github.com/user-attachments/assets/af06dcbc-e46f-4ef9-b8e1-29e2c55a8440)
+> ![image](https://github.com/user-attachments/assets/af06dcbc-e46f-4ef9-b8e1-29e2c55a8440)<br>
+> In order to get around this, consider running pixi task with `-e` flag:
+> ```
+> !pixi run --environment pyhepmc run-pyhepmc
+> ```
 ## hepmc2
 https://github.com/conda-forge/hepmc2-feedstock/pull/9<br>
 Added and specified `aarch64`, `ppc64le` and `osx_64` platforms for a `hepmc2` package
