@@ -4,18 +4,18 @@ channels = ["conda-forge"]
 description = "Add a short description here"
 name = "Packaging-the-HEP-simulation-stack"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
-#platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
 lab = "jupyter lab"
-#conda create --name new_env_jl -c conda-forge 
-#conda remove --name new_env_jl --all
-#conda install -c conda-forge hepmc2
-#conda install -c conda-forge hepmc3 
-compile-hepmc2 = "g++ hepmc2_example.cpp -o hepmc2_example -I$CONDA_PREFIX/include -L$CONDA_PREFIX/lib -lHepMC -g -pthread"
-compile-hepmc3 = "g++ hepmc3_example.cpp -o hepmc3_example -I$CONDA_PREFIX/include -L$CONDA_PREFIX/lib -Wl,-rpath,$CONDA_PREFIX/lib -lHepMC3 -g -pthread"
-run-pyhepmc = "python3 test_pyhepmc.py"
+
+hepmc2-example = "$CXX hepmc2_example.cpp -o hepmc2_example -I$CONDA_PREFIX/include -L$CONDA_PREFIX/lib -lHepMC -g -pthread && ./hepmc2_example"
+
+hepmc3-example = "$CXX hepmc3_example.cpp -o hepmc3_example $(HepMC3-config --cppflags --ldflags) && ./hepmc3_example"
+
+pyhepmc-example = "python test_pyhepmc.py"
+
+start = { depends-on = ["lab"] }
 
 [dependencies]
 python = ">=3.12.6,<4"
@@ -30,24 +30,4 @@ uproot = ">=5.3.12,<6"
 jupytext = ">=1.16.4,<2"
 matplotlib = ">=3.9.2,<4"
 ipympl = ">=0.9.4,<0.10"
-
-[feature.pyhepmc]
-platforms = ["linux-64"]
-
-[feature.pyhepmc.dependencies]
-python = ">=3.12.6,<4"
-cxx-compiler = ">=1.8.0,<2"
-lhapdf = ">=6.5.4,<7"
-hepmc2 = ">=2.6.11,<3"
-hepmc3 = ">=3.3.0,<4"
-pythia8 = ">=8.311,<9"
-notebook = ">=7.2.2,<8"
-jupyterlab = ">=4.2.5,<5"
-uproot = ">=5.3.12,<6"
-jupytext = ">=1.16.4,<2"
-matplotlib = ">=3.9.2,<4"
-ipympl = ">=0.9.4,<0.10"
-pyhepmc = "*"
-
-[environments]
-pyhepmc = ["pyhepmc"]
+pyhepmc = ">=2.14.0,<3"
