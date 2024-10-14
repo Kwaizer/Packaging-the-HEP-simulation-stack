@@ -1,0 +1,11 @@
+
+# pixi environments
+.pixi
+*.egg-info
+
+# binaries
+hepmc2_example
+hepmc3_example
+
+# jupyter
+.ipynb_checkpoints
